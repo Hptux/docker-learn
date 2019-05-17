@@ -4,23 +4,22 @@ learn how to use docker in my development
 ## install docker on ubuntu
 参考[docker官方手册]进行安装<br>
 
-###准备
-
+### 准备
        64位系统，16.04 或者更新的版本
        
-###删除旧版本
+### 删除旧版本
 
         $ sudo apt-get remove docker docker-engine docker.io containerd runc
         
 如没有安装，apt会返回没有包需要删除，这是正常的。
 相关内容会被保留`/var/lib/docker/`， 包含镜像，容器，网络等包
 
-###通过docker软件源安装
-####更新软件源：
+### 通过docker软件源安装
+#### 更新软件源：
 
         $ sudo apt-get update
         
-####安装相关包使apt可以支持https软件源：
+#### 安装相关包使apt可以支持https软件源：
 
         $ sudo apt-get install \
           apt-transport-https \
@@ -29,11 +28,11 @@ learn how to use docker in my development
           gnupg-agent \
           software-properties-common
           
-####添加docker官方GPG key：
+#### 添加docker官方GPG key：
 
         $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
         
-####校验key，特征码`9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88`
+#### 校验key，特征码`9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88`
 
         $ sudo apt-key fingerprint 0EBFCD88  
         pub   rsa4096 2017-02-22 [SCEA]
@@ -41,7 +40,7 @@ learn how to use docker in my development
         uid   [unknown] Docker Release (CE deb) <docker@docker.com>
         sub   rsa4096 2017-02-22 [S]
         
-####使用以下命令设置软件源：
+#### 使用以下命令设置软件源：
     (linux mint等发行版根据版本寻找对应ubuntu版本名，替换`$(lsb_release -cs)`)
         
         $ sudo add-apt-repository \
@@ -49,12 +48,12 @@ learn how to use docker in my development
          $(lsb_release -cs) \
          stable"
          
-####安装 DOCKER CE 最新版本：
+#### 安装 DOCKER CE 最新版本：
         
         $ sudo apt-get update
         $ sudo apt-get install docker-ce docker-ce-cli containerd.io
         
-####安装 DOCKER CE 指定版本：
+#### 安装 DOCKER CE 指定版本：
         
         $ apt-cache madison docker-ce
       
@@ -72,8 +71,8 @@ learn how to use docker in my development
 
         $ sudo docker run hello-world
 
-##安装完成后的一些处理
-###使非root用户不用sudo命令也可以管理docker
+## 安装完成后的一些处理
+### 使非root用户不用sudo命令也可以管理docker
 
    添加docker用户组：   
         

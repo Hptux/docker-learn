@@ -2,11 +2,11 @@
 learn how to use docker in my development
 
 # install docker on ubuntu
-参考[docker官方手册]进行安装<br>
-####准备<br>
+参考[docker官方手册]进行安装
+####准备
 
        64位系统，16.04 或者更新的版本
-####删除旧版本<br>
+####删除旧版本
 
         $ sudo apt-get remove docker docker-engine docker.io containerd runc
         

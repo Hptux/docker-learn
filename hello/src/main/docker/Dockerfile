@@ -1,4 +1,4 @@
-FROM java:8
+FROM fabric8/java-alpine-openjdk8-jre
 VOLUME /tmp
 ADD shadows-hello-0.0.1-SNAPSHOT.jar app.jar
 RUN sh -c 'touch /app.jar'

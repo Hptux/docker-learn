@@ -1,5 +1,6 @@
 package com.shadows.hello;
 
+import com.shadows.hello.util.IdUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.util.StringUtils;
@@ -13,7 +14,8 @@ public class HelloApplication {
     @GetMapping("/")
     public String hello(@RequestParam(value = "name", required = false) String name) {
         name = StringUtils.hasText(name) ? name : "shadows";
-        return "Hello " + name + "!";
+        long nextId = IdUtil.nextId();
+        return "Hello " + name + "!" + "id:" + nextId;
     }
 
     public static void main(String[] args) {

@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://192.168.2.253:3307/hpp_work1?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+logging:
+  level:
+    root: info

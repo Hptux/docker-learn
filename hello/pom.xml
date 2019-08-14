@@ -17,7 +17,6 @@
     <properties>
         <java.version>1.8</java.version>
         <docker.image.prefix>shadows-docker</docker.image.prefix>
-        <dockerHost>https://docker.shadows.top:2376</dockerHost>
     </properties>
 
     <dependencies>

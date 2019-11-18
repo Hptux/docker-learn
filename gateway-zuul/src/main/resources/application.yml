@@ -1,8 +1,8 @@
 server:
-  port: 8010
+  port: 8040
 spring:
   application:
-    name: movie-service
+    name: gateway-zuul
 eureka:
   client:
     service-url:
@@ -12,12 +12,6 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${random.int}
-logging:
-  level:
-    root: info
-feign:
-  hystrix:
-    enabled: true
 management:
   endpoints:
     web:

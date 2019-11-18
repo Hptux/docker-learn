@@ -1,0 +1,11 @@
+server:
+  port: 8030
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

@@ -1,8 +1,14 @@
 server:
-  port: 8010
+  port: 8011
 spring:
   application:
-    name: movie-service
+    name: movie-service-replicate
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: my_vhost
 eureka:
   client:
     service-url:

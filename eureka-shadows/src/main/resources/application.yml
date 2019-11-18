@@ -9,6 +9,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka:eureka2323@peer1:8761/eureka,http://eureka:eureka2323@peer2:8762/eureka
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
 ---
 spring:
      profiles: peer1

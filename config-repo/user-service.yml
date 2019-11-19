@@ -1,4 +1,4 @@
-profile: default-1.0-change
+profile: default-1.0
 server:
   port: 0
 spring:
@@ -25,3 +25,8 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${random.int}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'refresh','mappings'

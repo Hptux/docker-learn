@@ -1,4 +1,4 @@
-profile: dev-1.0
+profile: dev-1.0-change
 server:
   port: 0
 spring:
@@ -25,3 +25,8 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${random.int}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

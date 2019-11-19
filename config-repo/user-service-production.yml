@@ -1,1 +1,27 @@
-profile: test-1.0
+profile: production-1.0
+server:
+  port: 0
+spring:
+  application:
+    name: user-service
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: '{cipher}fd86a77d947e8f596078ba8addb165fa1f8091f9acdd96b04203849aede9b85de3d32f89f6ec778be68148509f3ff61c79c5dbc96a2ae66f063edad3d87900838cc8829f8041ab101080d33863056be8ef896c75b8cd7e825da05d600e868c91d79ccafe10936c4a8e91a062b86bab8c317a7aafa1f0829effb40cc255b2d3be'
+    username: root
+    password: '{cipher}05e56a9398aab647cd50fc3ea0adac77e5c2c2923ed9f51678a97aa08f2c4ed1'
+logging:
+  level:
+    root: info
+eureka:
+  client:
+    service-url:
+      defaultZone: '{cipher}b2d9758d56f5f7e9c4ebd4086515450fccce4f04ac1aa8cdec197505104cafcd579cdce3be651162499d4edd1337696a212798bbe5d802b7d32b3ca1a9561219859b7ffce1910f9380038f3dc68f01d19a48ef48d58f9ec755669d62cb83d76f240f4c318f68dd0738345a691e1878e4'
+    healthcheck:
+      enabled: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${random.int}

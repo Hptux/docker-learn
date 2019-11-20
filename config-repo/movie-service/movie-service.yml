@@ -1,12 +1,12 @@
 server:
-  port: 8010
+  port: 0
 spring:
   application:
     name: movie-service
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka:eureka2323@peer1:8761/eureka,http://eureka:eureka2323@peer2:8762/eureka
+      defaultZone: '{cipher}b2d9758d56f5f7e9c4ebd4086515450fccce4f04ac1aa8cdec197505104cafcd579cdce3be651162499d4edd1337696a212798bbe5d802b7d32b3ca1a9561219859b7ffce1910f9380038f3dc68f01d19a48ef48d58f9ec755669d62cb83d76f240f4c318f68dd0738345a691e1878e4'
     healthcheck:
       enabled: true
   instance:

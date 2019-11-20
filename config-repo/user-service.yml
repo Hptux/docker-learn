@@ -1,4 +1,4 @@
-profile: default-1.0-change
+profile: default-1.0
 server:
   port: 0
 spring:

@@ -13,6 +13,12 @@ spring:
     url: '{cipher}fd86a77d947e8f596078ba8addb165fa1f8091f9acdd96b04203849aede9b85de3d32f89f6ec778be68148509f3ff61c79c5dbc96a2ae66f063edad3d87900838cc8829f8041ab101080d33863056be8ef896c75b8cd7e825da05d600e868c91d79ccafe10936c4a8e91a062b86bab8c317a7aafa1f0829effb40cc255b2d3be'
     username: root
     password: '{cipher}05e56a9398aab647cd50fc3ea0adac77e5c2c2923ed9f51678a97aa08f2c4ed1'
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: my_vhost
 logging:
   level:
     root: info

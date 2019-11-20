@@ -1,0 +1,31 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: movie-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka:eureka2323@peer1:8761/eureka,http://eureka:eureka2323@peer2:8762/eureka
+    healthcheck:
+      enabled: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${random.int}
+logging:
+  level:
+    root: info
+    org.springframework.web.servlet.DispatcherServlet: debug
+feign:
+  hystrix:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
